@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timer SubGift</title>
+        <link rel="stylesheet" href="./styles/index.css" />
+    </head>
+    <body>
+        <div id="timer-win" class="off">
+            <img class="emote" id="image" src="images/ban.webp" alt="Ban" />
+            <span><span id="ban-number"></span> viewer banni</span>
+            <img class="emote" id="image" src="images/ban.webp" alt="Ban" />
+        </div>
+        <div id="emote-win" class="off">
+            <img class="emote" id="image" src="images/gift.webp" alt="Gift" />
+            <span>Pas de viewer banni</span>
+            <img class="emote" id="image" src="images/gift.webp" alt="Gift" />
+        </div>
+        <div class="row center off" id="game">
+            <div class="column">
+                <div class="row center">
+                    <div class="bar row">
+                        <div class="bar-progress end">
+                            <span id="timer">10</span>
+                        </div>
+                        <div id="bar-fill-timer"></div>
+                    </div>
+                    <img
+                        class="emote"
+                        id="image"
+                        src="images/ban.webp"
+                        alt="Ban" />
+                </div>
+                <div class="row center">
+                    <img
+                        class="emote"
+                        id="image"
+                        src="images/gift.webp"
+                        alt="Gift" />
+                    <div class="bar row">
+                        <div id="bar-fill-gift"></div>
+                        <div class="bar-progress">
+                            <span id="gift">10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span id="bad-user">10</span>
+        </div>
+    </body>
+    <!-- WebSocket for twitch -->
+    <script src="https://cdn.jsdelivr.net/gh/mitchwadair/tesjs@v1.0.2/dist/tes.min.js"></script>
+    <script src="./actions/config.js"></script>
+    <script src="./actions/update_ui.js"></script>
+    <script src="./actions/twitch_websocket.js"></script>
+    <script src="./actions/main.js"></script>
+</html>
